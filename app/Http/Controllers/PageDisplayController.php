@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use App\Repositories\PageRepository;
@@ -14,9 +15,16 @@ class PageDisplayController extends Controller
         if (TwillAppSettings::get('homepage.homepage.page')->isNotEmpty()) {
             /** @var \App\Models\Page $frontPage */
             $frontPage = TwillAppSettings::get('homepage.homepage.page')->first();
+
+            $articles = Article::published()->orderBy('created_at', 'desc')->get();
  
             if ($frontPage->published) {
-                return view('site.page', ['item' => $frontPage]);
+                return view(
+                    'site.home', 
+                    [
+                        'item' => $frontPage,
+                        'articles' => $articles
+                    ]);
             }
         }
  

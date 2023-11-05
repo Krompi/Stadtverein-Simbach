@@ -1,13 +1,7 @@
-<!doctype html>
-<html lang="en">
+@extends('site.layouts.base')
 
-<head>
-    <title>{{ $item->title }}</title>
-    @vite('resources/css/app.css')
-</head>
 
-<body>
-    <x-menu/> 
+@section('content')
     <section class="p-6 bg-gray-50 rounded-sm ">
         <div class="prose prose-xl prose-gray max-w-full">
             <h1>{!! $item->title !!}</h1>
@@ -23,6 +17,4 @@
             {!! $item->renderBlocks() !!}
         </div>
     </section>
-</body>
-
-</html>
+@endsection
