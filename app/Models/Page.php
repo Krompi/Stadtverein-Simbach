@@ -29,4 +29,21 @@ class Page extends Model
         'title',
     ];
     
+    public $mediasParams = [
+        'cover' => [
+            'default' => [
+                [
+                    'name' => 'default',
+                    'ratio' => 16 / 9,
+                ],
+            ],
+            'mobile' => [
+                [
+                    'name' => 'landscape',
+                    'ratio' => 16 / 9,
+                ],
+            ],
+        ],
+    ];
+    
 }
