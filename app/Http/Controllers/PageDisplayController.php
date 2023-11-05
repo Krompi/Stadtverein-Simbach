@@ -16,7 +16,7 @@ class PageDisplayController extends Controller
             $frontPage = TwillAppSettings::get('homepage.homepage.page')->first();
  
             if ($frontPage->published) {
-                return view('site.page', ['item' => $frontPage]);
+                return view('site.home', ['item' => $frontPage]);
             }
         }
  
