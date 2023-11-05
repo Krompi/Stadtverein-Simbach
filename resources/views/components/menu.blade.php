@@ -2,9 +2,11 @@
     <ul class="flex space-x-4 text-lg">
         @foreach($links as $link)
         <li>
+            @if ( $link->getRelated('page')->first() )
             <a href="{{route('frontend.page', [$link->getRelated('page')->first()->slug])}}">
                 {{$link->title}}
             </a>
+            @endif
         </li>
         @endforeach
     </ul>

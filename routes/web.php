@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home'); 
 Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page'); 
+
+Route::get('news', function () {
+    return view('site.articles.index', [
+        'articles' => Article::published()->orderBy('created_at', 'desc')->get(),
+    ]);
+})->name('articles');
