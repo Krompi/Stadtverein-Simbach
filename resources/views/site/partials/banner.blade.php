@@ -1,6 +1,6 @@
 <section class="relative pt-16 pb-32 flex content-center items-center justify-center" style="height: 400px;">
-    <div class="absolute top-0 w-full h-full bg-top bg-cover" style='background-image: url("/img/banner-01.jpg");'>
-        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+    <div class="absolute top-0 w-full h-full bg-top bg-cover" style='background-image: url("https://lh5.googleusercontent.com/p/AF1QipONsAIyiIRPIextGGh5j71iS21fvVg7fcCQxcTB=w1350-h780-n-k-no");'>
+        {{-- <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span> --}}
     </div>
     @hasSection('title')
     <div class="container relative mx-auto lg:max-w-5xl">

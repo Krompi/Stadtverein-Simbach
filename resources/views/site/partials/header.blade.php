@@ -1,4 +1,4 @@
-<header class=" bg-gray-400 border-b border-b-gray-400 w-full shadow text-white">
+<header class=" bg-gray-600 border-b border-b-gray-600 w-full shadow text-white">
     <div class=" max-w-5xl mx-auto pb-4">
         <h1>
         <a class="text-3xl leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="/">

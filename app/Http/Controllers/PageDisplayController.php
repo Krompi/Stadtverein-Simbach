@@ -17,6 +17,8 @@ class PageDisplayController extends Controller
             $frontPage = TwillAppSettings::get('homepage.homepage.page')->first();
 
             $articles = Article::published()->orderBy('created_at', 'desc')->get();
+
+            // dd($articles);
  
             if ($frontPage->published) {
                 return view(

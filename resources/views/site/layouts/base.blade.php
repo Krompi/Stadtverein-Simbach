@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
-<body class="text-gray-800 antialiased bg-gray-300">
+<body class="text-gray-800 antialiased bg-gray-200">
     
     @include('site.partials.header')
 

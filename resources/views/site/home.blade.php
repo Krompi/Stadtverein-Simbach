@@ -5,7 +5,7 @@
     <div class="grid grid-cols-3 gap-8">
 
         <section class=" col-span-2">
-            <h2 class=" font-medium text-2xl mb-4">aktuelle Meldungen</h2>
+            <h2 class=" font-medium text-2xl py-4 px-4 bg-gray-200 bg-opacity-40">aktuelle Meldungen</h2>
 
             <div class="grid grid-cols-2 gap-4">
 
@@ -20,12 +20,12 @@
                                     {!! $article->title !!}
                                 </h3>
                                 <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-                                    {!! $item->description !!}
+                                    {!! $article->description !!}
                                 </p>
                             </div>
                             <div class="p-6 pt-0">
                                 <a class="!font-medium !text-blue-gray-900 !transition-colors hover:!text-sky-500"
-                                    href="#">
+                                    href="{!! $article->slug !!}">
                                     <button
                                         class="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold text-center text-sky-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-sky-500/10 active:bg-sky-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                         type="button" data-ripple-dark="true">
@@ -47,9 +47,9 @@
         </section>
 
         <section>
-            <h2 class=" font-medium text-2xl mb-4">Veranstaltungen</h2>
+            <h2 class=" font-medium text-2xl py-4 px-4 bg-gray-200 bg-opacity-40 w-full">Veranstaltungen</h2>
 
-            <div class="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded bg-clip-border">
+            <div class="relative flex flex-col w-full text-gray-700 bg-white shadow-md rounded bg-clip-border">
                 <div class="p-6">
                     <h3
                         class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
