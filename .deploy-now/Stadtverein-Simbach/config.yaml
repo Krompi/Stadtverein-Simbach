@@ -46,6 +46,7 @@ deploy:
       - php artisan optimize:clear
       - php artisan migrate --force -n
       - php artisan storage:link
+      - php artisan twill:superadmin admin@test.de password
       - php artisan optimize
       - php artisan up
 
